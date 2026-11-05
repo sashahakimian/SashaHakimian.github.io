@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sasha Hakimian | MBA Candidate, Columbia Business School</title>
+<meta name="description" content="Sasha Hakimian: Columbia MBA '28, former Simon-Kucher Senior Consultant and early Candor employee, recruiting for Venture Capital internships in AI and B2B SaaS.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cb:#B9D9EB;        /* Columbia blue */
+  --cb-light:#E4F1F9;
+  --cb-bright:#9BDDFF;
+  --cb-deep:#5FA8D3;
+  --navy:#0B2540;
+  --ink:#1B3550;
+  --muted:#5A728A;
+  --paper:#FAFCFE;
+  --sun:#FFD58A;
+  --radius:20px;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--navy);color:#fff;padding:8px 14px;border-radius:8px;z-index:100}
+.skip:focus{left:8px}
+
+/* NAV */
+header.nav{position:sticky;top:0;z-index:50;background:rgba(250,252,254,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,37,64,.07)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:600;font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;color:var(--navy)}
+.brand span{color:var(--cb-deep)}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+nav a{display:block;padding:8px 14px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:500;color:var(--muted);transition:background .2s,color .2s}
+nav a:hover{background:var(--cb-light);color:var(--navy)}
+nav a.active{background:var(--cb);color:var(--navy)}
+.progress{position:absolute;left:0;bottom:-1px;height:2px;background:var(--cb-deep);width:0}
+.menu-btn{display:none;background:none;border:1px solid rgba(11,37,64,.2);border-radius:10px;padding:8px 12px;font:inherit;color:var(--navy);cursor:pointer}
+
+/* HERO */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--cb) 0%,var(--cb-light) 62%,var(--paper) 100%);padding:40px 0 44px}
+.sun{position:absolute;left:50%;bottom:-210px;width:520px;height:520px;margin-left:-260px;border-radius:50%;background:radial-gradient(circle,var(--sun) 0%,rgba(255,213,138,.55) 38%,rgba(255,213,138,0) 70%);animation:rise 2.4s ease-out both}
+@keyframes rise{from{transform:translateY(160px);opacity:0}to{transform:none;opacity:1}}
+.hero-in{position:relative;max-width:900px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:40px;text-align:left}
+.hero-text{flex:1;min-width:0}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--navy);background:rgba(255,255,255,.6);padding:7px 16px;border-radius:999px}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,6vw,4rem);line-height:1.04;color:var(--navy);margin:16px 0 12px;letter-spacing:-.02em}
+h1 em{font-style:italic;color:var(--cb-deep)}
+.lede{font-size:.98rem;color:var(--ink);max-width:520px;margin:0 0 20px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.hero .cta{justify-content:flex-start}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(11,37,64,.2)}
+.btn.ghost{background:rgba(255,255,255,.75);color:var(--navy)}
+.btn.ghost:hover{background:#fff}
+.mini{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:16px 0 4px}
+.mini.one{grid-template-columns:minmax(0,220px)}
+.stat{background:var(--cb-light);border-radius:16px;padding:16px 14px;text-align:center}
+.stat b{display:block;font-family:var(--serif);font-size:2.1rem;font-weight:600;color:var(--navy);line-height:1.1}
+.stat span{font-size:.82rem;color:var(--muted)}
+
+/* SECTIONS */
+section{padding:96px 0 24px}
+.kicker{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--cb-deep);margin:0 0 8px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,5vw,3rem);color:var(--navy);margin:0 0 36px;letter-spacing:-.01em}
+h3{font-family:var(--serif);font-weight:600;font-size:1.45rem;color:var(--navy);margin:0}
+.meta{color:var(--muted);font-size:.92rem}
+
+/* CARDS */
+.card{background:#fff;border:1px solid rgba(11,37,64,.07);border-radius:var(--radius);padding:30px;box-shadow:0 6px 24px rgba(11,37,64,.05)}
+.card+.card{margin-top:20px}
+.card-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 20px;align-items:baseline;margin-bottom:6px}
+.where{color:var(--muted);font-size:.9rem;white-space:nowrap}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0;list-style:none}
+.tags li{background:var(--cb-light);color:var(--navy);border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:500}
+.card ul.bul{margin:12px 0 0;padding-left:20px}
+.card ul.bul li{margin:7px 0}
+.card ul.bul li::marker{color:var(--cb-deep)}
+.sub{font-weight:600;color:var(--navy);margin:12px 0 0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid2 .card+.card{margin-top:0}
+.role{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px}
+.pill{background:var(--cb);border-radius:999px;padding:3px 12px;font-size:.82rem;font-weight:600;color:var(--navy)}
+.hl{background:linear-gradient(180deg,transparent 62%,rgba(155,221,255,.7) 62%);font-weight:600;color:var(--navy)}
+
+/* PROJECT TILES (accordion) */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+details.proj{background:var(--cb-light);border-radius:16px;padding:0;transition:background .2s,box-shadow .2s}
+details.proj[open]{grid-column:1/-1;background:#fff;box-shadow:inset 0 0 0 2px var(--cb)}
+details.proj summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;flex-direction:column;gap:6px}
+details.proj summary::-webkit-details-marker{display:none}
+details.proj summary b{font-family:var(--serif);font-size:1.9rem;color:var(--navy);line-height:1}
+details.proj summary span{font-size:.9rem;line-height:1.35}
+details.proj summary i{font-style:normal;font-size:.8rem;font-weight:600;color:var(--cb-deep);margin-top:4px}
+details.proj[open] summary i::after{content:" (close)"}
+details.proj:not([open]) summary i::after{content:" +"}
+details.proj:not([open]):hover{background:var(--cb)}
+details.proj ul{margin:0;padding:0 24px 22px 44px}
+details.proj li{margin:7px 0}
+details.proj li::marker{color:var(--cb-deep)}
+
+/* WRITING */
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:var(--radius);overflow:hidden;background:var(--navy);color:#fff}
+.feature .art{background:radial-gradient(circle at 30% 80%,var(--sun) 0,rgba(255,213,138,0) 45%),linear-gradient(160deg,var(--cb-deep),var(--navy));min-height:260px;display:flex;align-items:flex-end;padding:28px}
+.feature .art q{font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.3;quotes:none}
+.feature .body{padding:34px}
+.feature h3{color:#fff;font-size:1.8rem}
+.feature p{color:#D5E6F3}
+.feature .tags li{background:rgba(185,217,235,.18);color:var(--cb)}
+.soon{display:inline-block;margin-top:10px;font-size:.85rem;font-weight:600;color:var(--sun)}
+
+/* FOOTER */
+.contact{margin-top:96px;background:linear-gradient(0deg,var(--cb) 0%,var(--cb-light) 100%);padding:80px 0 50px;text-align:center}
+.contact h2{margin-bottom:12px}
+.contact p{max-width:520px;margin:0 auto 26px}
+.fine{margin-top:44px;font-size:.82rem;color:var(--muted)}
+
+.headshot{display:block;width:210px;height:210px;flex:none;margin:0;border-radius:50%;object-fit:cover;border:5px solid #fff;box-shadow:0 0 0 4px var(--sun),0 16px 36px rgba(11,37,64,.25)}
+
+#writing{padding-top:36px}
+#writing h2{margin-bottom:20px}
+.feature .art{min-height:210px}
+.feature .body{padding:26px 30px}
+@media (max-width:820px){.hero-in{flex-direction:column-reverse;text-align:center;gap:20px}.hero .cta{justify-content:center}.lede{margin:0 auto 20px}.headshot{width:150px;height:150px}}
+
+/* NAVY + SUNRISE THEME (matches the Writing feature) */
+.card{background:radial-gradient(circle at 100% 100%,rgba(255,213,138,.26) 0,rgba(255,213,138,0) 42%),linear-gradient(160deg,#17476F 0%,var(--navy) 72%);color:#E4F1F9;border:0;box-shadow:0 16px 36px rgba(11,37,64,.2)}
+.card h3,.card .sub,.card ul.bul b{color:#fff}
+.card .meta,.card .where{color:#B3CCDF}
+.card .pill{background:var(--sun);color:var(--navy)}
+.card .tags li{background:rgba(185,217,235,.18);color:var(--cb)}
+.card ul.bul li::marker,details.proj li::marker{color:var(--sun)}
+.hl{background:linear-gradient(180deg,transparent 62%,rgba(255,213,138,.38) 62%);color:#fff}
+.stat{background:rgba(185,217,235,.13)}
+.stat b{color:var(--sun)}
+.stat span{color:#D5E6F3}
+details.proj{background:rgba(185,217,235,.13);color:#E4F1F9}
+details.proj[open]{background:rgba(11,37,64,.55);box-shadow:inset 0 0 0 2px rgba(255,213,138,.55)}
+details.proj:not([open]):hover{background:rgba(185,217,235,.24)}
+details.proj summary b{color:var(--sun)}
+details.proj summary i{color:var(--cb)}
+.contact{background:radial-gradient(ellipse at 50% 120%,rgba(255,213,138,.5) 0,rgba(255,213,138,0) 55%),linear-gradient(180deg,#17476F 0%,var(--navy) 100%);color:#D5E6F3}
+.contact h2{color:#fff}
+.contact .kicker{color:var(--sun)}
+.contact .btn.primary{background:var(--sun);color:var(--navy);box-shadow:none}
+.contact .fine{color:#B3CCDF}
+.progress{background:linear-gradient(90deg,var(--cb-deep),var(--sun))}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:820px){
+  .menu-btn{display:block}
+  nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--paper);padding:12px 24px 18px;border-bottom:1px solid rgba(11,37,64,.1)}
+  nav ul.open{display:flex}
+  .mini,.mini.one{grid-template-columns:1fr}
+  .grid2,.projects,.feature{grid-template-columns:1fr}
+  .card{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .sun{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  .btn{transition:none}
+}
+@media print{
+  header.nav,.sun,.cta,.menu-btn{display:none}
+  .rv{opacity:1;transform:none}
+  details.proj:not([open]) ul{display:block}
+  section{padding-top:32px}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Sasha Hakimian, home">Sasha <span>Hakimian</span></a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav aria-label="Primary">
+      <ul id="menu">
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#more">Beyond Work</a></li>
+        <li><a href="#contact">Say hello</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<main id="main">
+<div class="hero" id="top">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="wrap hero-in">
+    <div class="hero-text">
+    <span class="eyebrow">Columbia MBA '28 · Venture Capital · AI &amp; B2B SaaS</span>
+    <h1>Sasha <em>Hakimian</em></h1>
+    <p class="lede">I spent four years helping B2B software companies figure out what to charge, and one year at a fintech startup before that. Now I want to help find and back the next ones.</p>
+    <div class="cta">
+      <a class="btn primary" href="#experience">See my experience &darr;</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/sashahakimian" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/SashaHakimian" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    </div>
+    <img class="headshot" src="Headshot.jpg" width="400" height="400" alt="Headshot of Sasha Hakimian smiling in a white collared shirt">
+  </div>
+</div>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="wrap">
+    <p class="kicker">Writing</p>
+    <h2 class="rv">What I'm thinking about</h2>
+    <article class="feature rv">
+      <div class="art"><q>Agents currently get the badge without the supervision.</q></div>
+      <div class="body">
+        <ul class="tags" style="margin:0 0 14px"><li>AI agents</li><li>Identity security</li><li>Venture</li></ul>
+        <h3>Who Supervises AI Agents?</h3>
+        <p>Access controls tell you what an AI agent is allowed to do. They don’t tell you whether it should be doing it. A look at runtime identity security, the startups building it, why incumbents are buying their way in, and what it means for investors.</p>
+        <span class="soon">Coming soon on Substack</span>
+      </div>
+    </article>
+  </div>
+</section>
+<!-- EDUCATION -->
+<section id="education">
+  <div class="wrap">
+    <p class="kicker">Education</p>
+    <h2 class="rv">Where I've studied</h2>
+    <div class="card rv">
+      <div class="card-head"><h3>Columbia Business School</h3><span class="where">New York, NY &middot; 2026&ndash;2028</span></div>
+      <div class="role"><span class="pill">MBA</span><span class="meta">May 2028</span></div>
+      <p class="meta" style="margin:10px 0 0">Memberships</p>
+      <ul class="tags">
+        <li>Venture Capital Club</li><li>Private Equity Club</li><li>Columbia Entrepreneurs Association</li><li>Tech Club</li><li>AI Club</li><li>Tennis Club</li><li>Jewish Business Students Association</li>
+      </ul>
+    </div>
+    <div class="card rv">
+      <div class="card-head"><h3>Emory University</h3><span class="where">Atlanta, GA &middot; 2018&ndash;2022</span></div>
+      <div class="role"><span class="pill">BBA</span><span class="meta">May 2022 &middot; Dual Concentration: Finance, Organization &amp; Management</span></div>
+      <ul class="bul">
+        <li><b>Honors:</b> Cum Laude</li>
+        <li><b>Leadership:</b> Emory Impact Investing Group (Chief Investment Officer), Tamid at Emory (Director of Education)</li>
+        <li><b>Semester Abroad:</b> Bayes Business School, City University, London</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="wrap">
+    <p class="kicker">Experience</p>
+    <h2 class="rv">What I've done</h2>
+
+    <div class="card rv">
+      <div class="card-head"><h3>Simon-Kucher</h3><span class="where">New York, NY &middot; 2022&ndash;2026</span></div>
+      <div class="role"><span class="pill">Senior Consultant</span><span class="meta">2024&ndash;2026</span><span class="pill">Consultant</span><span class="meta">2022&ndash;2024</span></div>
+      <div class="mini">
+        <div class="stat"><b>12</b><span>pricing &amp; strategy engagements</span></div>
+        <div class="stat"><b>~$1.5M</b><span>added project work from pitches</span></div>
+        <div class="stat"><b>$50M&ndash;$1B</b><span>ARR of client companies</span></div>
+      </div>
+      <ul class="bul">
+        <li>Delivered <span class="hl">12 pricing and commercial strategy engagements</span> (3&ndash;6 months each) for B2B software and industrials clients with $50M&ndash;$1B ARR</li>
+        <li>Developed business development pitch presentations that produced <span class="hl">~$1.5M in additional project work</span></li>
+      </ul>
+      <p class="sub" style="margin-top:22px">Selected Projects <span class="meta" style="font-weight:400">(tap a tile to expand)</span></p>
+      <div class="projects">
+        <details class="proj">
+          <summary><b>$150M</b><span>ARR software supply chain management solution provider</span><i>Details</i></summary>
+          <ul>
+            <li>Diagnosed commercial performance through transaction analysis and executive, expert, customer, and prospect interviews; identified 6 pricing, marketing, and sales quick wins and longer-term opportunities</li>
+            <li>Built a conjoint simulation and customer-level price sensitivity model to set packaging and price levels, projecting 12% revenue uplift over the existing forecast</li>
+            <li>Presented project case study to CEOs of 15 Vista Equity Partners portfolio companies</li>
+          </ul>
+        </details>
+        <details class="proj">
+          <summary><b>$70M</b><span>ARR cybersecurity provider specializing in Zero Trust Access and infrastructure security</span><i>Details</i></summary>
+          <ul>
+            <li>Developed pricing and packaging strategy for current products and upcoming AI product capabilities using 600 participant quantitative survey</li>
+            <li>Built excel model using four years of historical customer transaction and usage data to estimate impact on new business, cross sell, upsell, and churn forecasts, leading to estimated revenue uplift of 9%</li>
+            <li>Designed automated renewal and expansion segmentation strategy using quantitative survey and industry expert interviews; Presented findings to CEO, CFO, and CCO to secure buy-in and develop implementation plan</li>
+          </ul>
+        </details>
+        <details class="proj">
+          <summary><b>$1B</b><span>ARR residential and commercial services management software provider</span><i>Details</i></summary>
+          <ul>
+            <li>Built a peer pricing engine for 335 SKUs using 3 years of monthly data across 10,000 customers; led 20 validation meetings with pricing, sales, and finance leaders to drive long-term adoption</li>
+            <li>Developed a generative-AI-enabled sensitivity model estimating how price changes would shift deal approval rates for different sales leaders</li>
+            <li>Led implementation of tool into customer’s CRM instance by facilitating touchpoints between internal strategy and software development teams and client’s pricing, sales, and product teams</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="card rv">
+      <div class="card-head"><h3>Candor</h3><span class="where">San Francisco, CA &middot; 2021&ndash;2022</span></div>
+      <p class="meta" style="margin:0">Fintech startup enabling tech employees to reinvest their stock compensation into asset portfolio</p>
+      <div class="role" style="margin-top:10px"><span class="pill">Operations Analyst</span><span class="meta">2021&ndash;2022</span></div>
+      <div class="mini one">
+        <div class="stat"><b>5</b><span>Fortune 500 partnerships</span></div>
+      </div>
+      <ul class="bul">
+        <li>Joined as employee #15, working directly with the CEO; led the cross-functional launch of a new investing feature, coordinating developers and UX designers</li>
+        <li>Created enterprise partnership pitch materials that resulted in <span class="hl">partnerships with 5 Fortune 500 technology companies</span>, growing user base from hundreds to tens of thousands</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ADDITIONAL INFORMATION -->
+<section id="more">
+  <div class="wrap">
+    <p class="kicker">Additional Information</p>
+    <h2 class="rv">Beyond the résumé</h2>
+    <div class="grid2">
+      <div class="card rv">
+        <h3>Volunteer Work</h3>
+        <ul class="bul"><li>BLK Consulting Company Sponsor</li><li>National Breast Cancer Research Institute</li></ul>
+      </div>
+      <div class="card rv">
+        <h3>Interests</h3>
+        <ul class="tags">
+          <li>🎾 Tennis (incl. ATP and WTA Tour)</li><li>🏃 Half marathons</li><li>🐕 Miniature dachshunds</li><li>✈️ Solo travel</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Say hello</p>
+    <h2>Let's talk AI, B2B software, and venture.</h2>
+    <p>I'm recruiting for Venture Capital internships focused on AI and B2B SaaS. The fastest way to reach me is LinkedIn, email, or phone.</p>
+    <div class="cta">
+      <a class="btn primary" href="https://www.linkedin.com/in/sashahakimian" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      <a class="btn ghost" href="mailto:sh4862@gsb.columbia.edu">sh4862@gsb.columbia.edu</a>
+      <a class="btn ghost" href="tel:+15166109750">516-610-9750</a>
+      <a class="btn ghost" href="https://github.com/SashaHakimian" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <p class="fine">&copy; 2026 Sasha Hakimian</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // mobile menu
+  var btn=document.querySelector('.menu-btn'),menu=document.getElementById('menu');
+  btn.addEventListener('click',function(){var o=menu.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A'){menu.classList.remove('open');btn.setAttribute('aria-expanded','false')}});
+
+  // scroll-spy
+  var links=[].slice.call(menu.querySelectorAll('a'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function spy(){
+    var y=window.scrollY+140,cur=-1;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+    links.forEach(function(a,i){a.classList.toggle('active',i===cur);if(i===cur)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    document.getElementById('progress').style.width=(h>0?window.scrollY/h*100:0)+'%';
+  }
+  window.addEventListener('scroll',spy,{passive:true});spy();
+
+  // reveal on scroll
+  var els=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
